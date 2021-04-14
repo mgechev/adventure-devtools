@@ -1,0 +1,10 @@
+#devtools {
+  position: fixed;
+  bottom: 0;
+  height: 30%;
+  max-height: 400px;
+  min-height: 250px;
+  width: 100%;
+  left: 0;
+  border: 0;
+}

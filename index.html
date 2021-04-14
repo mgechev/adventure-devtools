@@ -1,0 +1,21 @@
+<link href="app-styles.css" rel="stylesheet">
+<app style="display: none;"></app>
+<button id="devtools-btn">Toggle DevTools</button>
+<script src="app.js"></script>
+<iframe id="devtools" src="devtools.html"></iframe>
+<script>
+  (() => {
+    const devtools = document.querySelector('#devtools');
+    const toggleDevTools = () => {
+      const {display} = devtools.style;
+      devtools.style.display = display === 'none' ? 'block' : 'none';
+    };
+    document.querySelector('#devtools-btn').addEventListener('click', toggleDevTools);
+
+    // Perform an action when the app is fixed
+    window.__ngAppFixed__ = () => {
+      alert('The app is fixed!');
+    };
+  })()
+</script>
+
